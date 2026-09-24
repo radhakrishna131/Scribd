@@ -1,0 +1,2 @@
+import React from 'react'; import {createRoot} from 'react-dom/client'; import './styles/index.css'; import {Home} from './pages/Home'; import {Generate} from './pages/Generate';
+export function Link({to,children,className}:{to:string;children:React.ReactNode;className?:string}){return <a href={to} className={className}>{children}</a>}; createRoot(document.getElementById('root')!).render(location.pathname==='/generate'?<Generate/>:<Home/>);
